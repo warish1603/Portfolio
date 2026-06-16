@@ -12,6 +12,7 @@ export default function Home() {
           imageAlt={siteConfig.landing.heroAlt}
           title={siteConfig.name}
           subtitle={siteConfig.tagline}
+          bio={siteConfig.bio}
         />
         <PortfolioGrid items={siteConfig.landing.portfolio} />
       </div>

@@ -11,7 +11,7 @@ interface HeroSectionProps {
   imageAlt: string;
   title: string;
   subtitle: string;
-
+  bio: string;
 }
 
 export default function HeroSection({
@@ -19,6 +19,7 @@ export default function HeroSection({
   imageAlt,
   title,
   subtitle,
+  bio
 }: HeroSectionProps) {
   return (
     <div className="relative w-full h-screen flex items-center justify-start">
@@ -43,11 +44,14 @@ export default function HeroSection({
         transition={{ duration: 0.6, delay: 0.2 }}
         className="relative z-10 bottom-16 left-6 md:left-12 max-w-2xl"
       >
-        <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-light mb-4 text-black drop-shadow-lg">
+        <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-light mb-4 text-white drop-shadow-lg">
           {title}
         </h1>
-        <p className="font-sans text-lg md:text-xl font-light text-gray-900 drop-shadow-md">
+        <p className="font-sans text-lg md:text-xl font-light text-beige drop-shadow-md">
           {subtitle}
+        </p>
+        <p className="font-sans text-xs md:text-sm italic font-light text-beige drop-shadow-md">
+          {bio}
         </p>
       </motion.div>
     </div>

@@ -48,6 +48,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <head>
         <style dangerouslySetInnerHTML={{ __html: themeStyle }} />
+        <link rel="icon" href="/favicon.png" type="image/png" />
       </head>
       <body className="flex flex-col min-h-screen">
         <Navbar />
