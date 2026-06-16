@@ -15,18 +15,15 @@ export default function CollectionsPage() {
 
         {/* Collections Grid */}
         <div className="max-w-7xl mx-auto px-6 md:px-8 pb-24 md:pb-32">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {siteConfig.collections.map((collection, index) => (
-              <CollectionCard
-                key={collection.slug}
-                slug={collection.slug}
-                title={collection.title}
-                year={collection.year}
-                coverImage={collection.coverImage}
-                index={index}
-              />
-            ))}
-          </div>
+          <CollectionCard
+            items={siteConfig.collections.map((collection, index) => ({
+              slug: collection.slug,
+              title: collection.title,
+              year: collection.year,
+              coverImage: collection.coverImage,
+              index,
+            }))}
+          />
         </div>
       </div>
     </PageTransition>

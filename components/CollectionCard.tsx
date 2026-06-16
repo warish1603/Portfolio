@@ -5,24 +5,38 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
-interface CollectionCardProps {
+interface CollectionCardItemProps {
   slug: string;
   title: string;
   year: string;
-  coverImage: string;
+  coverImage: { src: string; alt: string; width: number; height: number };
   index: number;
+}
+
+interface CollectionGridProps {
+  items: readonly CollectionCardItemProps[];
 }
 
 const blurDataURL =
   "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/8+wHgAFBQIAX8jx0gAAAABJRU5ErkJggg==";
 
-export default function CollectionCard({
+export default function CollectionCard({ items }: CollectionGridProps) {
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {items.map((item, index) => (
+        <CollectionCardItem key={item.slug} {...item} index={index} />
+      ))}
+    </div>
+  );
+}
+
+function CollectionCardItem({
   slug,
   title,
   year,
   coverImage,
   index,
-}: CollectionCardProps) {
+}: CollectionCardItemProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -31,14 +45,17 @@ export default function CollectionCard({
       viewport={{ once: true }}
     >
       <Link href={`/collections/${slug}`} className="group block">
-        <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
+        <div className="relative aspect-[3/4] overflow-hidden rounded-lg bg-surface collection-cover">
           <Image
-            src={coverImage}
-            alt={title}
-            fill
-            className="object-cover group-hover:scale-[1.03] transition-transform duration-400"
+            src={coverImage.src}
+            alt={coverImage.alt}
+            width={coverImage.width}
+            height={coverImage.height}
+            className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
             placeholder="blur"
             blurDataURL={blurDataURL}
+            quality={82}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
 
           {/* Overlay */}

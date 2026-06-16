@@ -11,6 +11,7 @@ interface HeroSectionProps {
   imageAlt: string;
   title: string;
   subtitle: string;
+
 }
 
 export default function HeroSection({
@@ -42,10 +43,10 @@ export default function HeroSection({
         transition={{ duration: 0.6, delay: 0.2 }}
         className="relative z-10 bottom-16 left-6 md:left-12 max-w-2xl"
       >
-        <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-light mb-4">
+        <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-light mb-4 text-black drop-shadow-lg">
           {title}
         </h1>
-        <p className="font-sans text-lg md:text-xl font-light text-muted">
+        <p className="font-sans text-lg md:text-xl font-light text-gray-900 drop-shadow-md">
           {subtitle}
         </p>
       </motion.div>

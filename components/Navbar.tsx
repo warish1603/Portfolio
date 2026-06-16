@@ -27,7 +27,7 @@ export default function Navbar() {
       </a>
 
       <nav
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-[9990] transition-all duration-300 ${
           isScrolled ? "bg-surface/80 backdrop-blur-md border-b border-subtle" : "bg-transparent"
         }`}
         aria-label="Main navigation"

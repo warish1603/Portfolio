@@ -47,6 +47,18 @@ textarea {
   color: inherit;
 }
 
+/* Portfolio — image display rules */
+img {
+  border-radius: 0 !important;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Restore radius only on collection cover cards */
+.collection-cover img {
+  border-radius: 0 !important; /* radius is on parent, not img */
+}
+
 /* Focus ring utility */
 .focus-ring {
   @apply focus:outline-none focus:ring-2 focus:ring-accent;

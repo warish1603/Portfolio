@@ -5,22 +5,24 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import ImageLightbox from "./ImageLightbox";
 
-interface PortfolioItem {
+interface CollectionImage {
   src: string;
   alt: string;
-  caption?: string;
   width: number;
   height: number;
+  caption?: string;
 }
 
-interface PortfolioGridProps {
-  items: readonly PortfolioItem[];
+interface CollectionClientPageProps {
+  collection: {
+    title: string;
+    year?: string;
+    heroImage?: CollectionImage;
+    images: readonly CollectionImage[];
+  };
 }
 
-const blurDataURL =
-  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/8+wHgAFBQIAX8jx0gAAAABJRU5ErkJggg==";
-
-export default function PortfolioGrid({ items }: PortfolioGridProps) {
+export default function CollectionClientPage({ collection }: CollectionClientPageProps) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const handleImageClick = (index: number) => {
@@ -29,8 +31,32 @@ export default function PortfolioGrid({ items }: PortfolioGridProps) {
 
   const closeLightbox = () => setSelectedIndex(null);
 
+  const allImages = collection.images; // Lightbox uses the grid images
+
   return (
     <>
+      {/* Hero Banner */}
+      {collection.heroImage && (
+        <div className="relative h-[70vh] min-h-[500px] w-full overflow-hidden">
+          <Image
+            src={collection.heroImage.src}
+            alt={collection.heroImage.alt}
+            fill
+            quality={85}
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/60 to-black" />
+          <div className="absolute bottom-0 left-0 right-0 p-8 md:p-16 text-white">
+            <h1 className="font-serif text-5xl md:text-7xl font-light tracking-tight">
+              {collection.title}
+            </h1>
+            {collection.year && <p className="text-xl mt-2 opacity-80">{collection.year}</p>}
+          </div>
+        </div>
+      )}
+
+      {/* Masonry Grid */}
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-16">
         <div
           style={{
@@ -38,7 +64,7 @@ export default function PortfolioGrid({ items }: PortfolioGridProps) {
             columnGap: "20px",
           }}
         >
-          {items.map((item, index) => (
+          {collection.images.map((item, index) => (
             <motion.div
               key={item.src}
               initial={{ opacity: 0, y: 30 }}
@@ -56,7 +82,7 @@ export default function PortfolioGrid({ items }: PortfolioGridProps) {
                 height={item.height}
                 quality={88}
                 placeholder="blur"
-                blurDataURL={blurDataURL}
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/8+wHgAFBQIAX8jx0gAAAABJRU5ErkJggg=="
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 style={{
                   width: "100%",
@@ -68,7 +94,7 @@ export default function PortfolioGrid({ items }: PortfolioGridProps) {
               />
 
               {item.caption && (
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent p-8 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-8 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
                   <p className="text-white text-[13px] font-light">{item.caption}</p>
                 </div>
               )}
@@ -77,8 +103,9 @@ export default function PortfolioGrid({ items }: PortfolioGridProps) {
         </div>
       </div>
 
+      {/* Lightbox */}
       <ImageLightbox
-        images={items}
+        images={allImages}
         isOpen={selectedIndex !== null}
         initialIndex={selectedIndex ?? 0}
         onClose={closeLightbox}

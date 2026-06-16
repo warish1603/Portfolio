@@ -3,7 +3,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import siteConfig from "@/site.config";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import "./globals.css";
+import "@/app/globals.css";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -18,6 +18,9 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: siteConfig.seo.title,
   description: siteConfig.seo.description,
+  icons: {
+    icon: siteConfig.seo.favicon,
+  },
   openGraph: {
     title: siteConfig.seo.title,
     description: siteConfig.seo.description,
