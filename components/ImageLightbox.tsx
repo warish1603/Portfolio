@@ -13,7 +13,7 @@ interface ImageData {
 
 interface ImageLightboxProps {
   isOpen: boolean;
-  images: ImageData[];
+  images: readonly ImageData[];
   currentIndex: number;
   onClose: () => void;
   onNext: () => void;

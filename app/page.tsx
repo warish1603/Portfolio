@@ -1,6 +1,6 @@
 import siteConfig from "@/site.config";
 import HeroSection from "@/components/HeroSection";
-import WorkGrid from "@/components/WorkGrid";
+import PortfolioGrid from "@/components/PortfolioGrid";
 import PageTransition from "@/components/PageTransition";
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
           title={siteConfig.name}
           subtitle={siteConfig.tagline}
         />
-        <WorkGrid items={siteConfig.landing.work} />
+        <PortfolioGrid items={siteConfig.landing.portfolio} />
       </div>
     </PageTransition>
   );
