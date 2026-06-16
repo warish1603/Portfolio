@@ -110,7 +110,7 @@ export default function ContactForm({ formspreeEndpoint }: ContactFormProps) {
           animate={{ opacity: 1 }}
           className="text-sm text-green-400"
         >
-          Thanks, I'll be in touch.
+          Thanks, I&apos;ll be in touch.
         </motion.p>
       )}
 

@@ -45,13 +45,12 @@ function CollectionCardItem({
       viewport={{ once: true }}
     >
       <Link href={`/collections/${slug}`} className="group block">
-        <div className="relative aspect-[3/4] overflow-hidden rounded-lg bg-surface collection-cover">
+        <div className="relative overflow-hidden rounded-lg bg-surface collection-cover" style={{ aspectRatio: "1565/2783" }}>
           <Image
             src={coverImage.src}
             alt={coverImage.alt}
-            width={coverImage.width}
-            height={coverImage.height}
-            className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+            fill
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             placeholder="blur"
             blurDataURL={blurDataURL}
             quality={82}

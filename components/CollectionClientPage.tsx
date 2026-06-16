@@ -35,9 +35,9 @@ export default function CollectionClientPage({ collection }: CollectionClientPag
 
   return (
     <>
-      {/* Hero Banner */}
+      {/* Mini Hero Banner */}
       {collection.heroImage && (
-        <div className="relative h-[70vh] min-h-[500px] w-full overflow-hidden">
+        <div className="relative h-[40vh] min-h-[350px] w-full overflow-hidden">
           <Image
             src={collection.heroImage.src}
             alt={collection.heroImage.alt}
@@ -48,10 +48,10 @@ export default function CollectionClientPage({ collection }: CollectionClientPag
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/60 to-black" />
           <div className="absolute bottom-0 left-0 right-0 p-8 md:p-16 text-white">
-            <h1 className="font-serif text-5xl md:text-7xl font-light tracking-tight">
+            <h1 className="font-serif text-4xl md:text-5xl font-light tracking-tight">
               {collection.title}
             </h1>
-            {collection.year && <p className="text-xl mt-2 opacity-80">{collection.year}</p>}
+            {collection.year && <p className="text-lg mt-2 opacity-80">{collection.year}</p>}
           </div>
         </div>
       )}
