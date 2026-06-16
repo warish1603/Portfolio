@@ -13,11 +13,9 @@
     "resolveJsonModule": true,
     "outDir": "./dist",
     "rootDir": "./",
-    "baseUrl": "./",
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@/*": ["./*"],
+      "@/components/*": ["./components/*"]
     },
     "strict": true,
     "noEmit": true,
@@ -40,7 +38,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "globals.d.ts"
   ],
   "exclude": [
     "node_modules"

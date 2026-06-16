@@ -10,7 +10,7 @@ Build a complete, production-ready personal portfolio website. It must be fully 
 
 ## TECH STACK
 
-- **Frameportfolio**: Next.js 14 (App Router, TypeScript)
+- **Framework**: Next.js 14 (App Router, TypeScript)
 - **Styling**: Tailwind CSS v3
 - **Animations**: Framer Motion
 - **Icons**: Lucide React

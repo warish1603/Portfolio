@@ -155,7 +155,7 @@ const siteConfig = {
 
   /* ─── Contact page ──────────────────────────────── */
   contact: {
-    heading: "Let's work together.",
+    heading: "Let's portfolio together.",
     subheading: "Available for commissions, editorial, and commercial projects.",
     email: "hello@alexmorgan.com",
     formspreeEndpoint: "https://formspree.io/f/YOUR_FORM_ID",

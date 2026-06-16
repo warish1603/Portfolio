@@ -59,7 +59,7 @@ const siteConfig = {
 - **`theme.*`** — All other theme colors
 - **`nav`** — Navigation links and labels
 - **`landing.heroImage`** — Hero image on home page
-- **`landing.work`** — Images and captions in the work grid
+- **`landing.portfolio`** — Images and captions in the portfolio grid
 - **`collections`** — Your portfolio projects/series
 - **`contact.heading`** — Contact page heading
 - **`contact.email`** — Your email address
@@ -84,7 +84,7 @@ By default, the site uses Unsplash placeholder images. These work immediately an
    ```
    public/images/
    ├── hero.jpg                 # Homepage hero
-   ├── work/
+   ├── portfolio/
    │   ├── 01.jpg
    │   ├── 02.jpg
    │   └── ...
@@ -179,7 +179,7 @@ Ensure `muted` text meets WCAG AA standards against `background`. The defaults p
 
 ## Pages
 
-- **`/`** — Landing page with hero and work grid
+- **`/`** — Landing page with hero and portfolio grid
 - **`/collections`** — Collections index (tile grid)
 - **`/collections/[slug]`** — Individual collection detail with masonry grid
 - **`/contact`** — Contact page with form
@@ -222,7 +222,7 @@ vercel
 │   ├── PageTransition.tsx
 │   ├── ImageLightbox.tsx
 │   ├── HeroSection.tsx
-│   ├── WorkGrid.tsx
+│   ├── portfolioGrid.tsx
 │   ├── CollectionCard.tsx
 │   └── ContactForm.tsx
 ├── lib/
