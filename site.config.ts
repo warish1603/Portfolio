@@ -316,8 +316,9 @@ const siteConfig = {
     description:
       "Portfolio of cobraghai, photographer and visual storyteller based in Cape Town.",
     ogImage:
-      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&q=80&auto=format",
+      "/images/86AC3A72-C2BF-4980-8CC1-7FA2276A83C9.jpeg",
     favicon:"/public/favicon.png",  
+    
   },
 } as const;
 
