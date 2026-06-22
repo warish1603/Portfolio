@@ -36,37 +36,6 @@ const siteConfig = {
         alt: "Two men sat in an vintage lounge",
         caption: "Awonke Moko and Vaice at prettygirlslikeevents",
         width: 4096, height: 2769,
-      },
-      {
-        src: "/images/IMG_1821.jpeg",
-        alt: "group photo",
-        caption: "kokoroko after Kokoroko",
-        width: 4096, height: 2769,
-      },
-      {
-        src: "/images/IMG_0126.jpeg",
-        alt: "mapochocho kadhaa and dat",
-        caption: "beit e salam spread",
-        width: 4096, height: 2769,
-      },
-      {
-        src: "/images/IMG_5718.jpeg",
-        alt: "Beach Cabanas",
-        caption: "Cellie",
-        width: 4096, height: 2769,
-      },
-      {
-        src: "/images/IMG_5687.jpeg",
-        alt: "City at night",
-        caption: "Colesseum",
-        width: 2324, height: 3438,
-      }
-      ,
-      {
-        src: "/images/IMG_0115.jpg",
-        alt: "Portrait of two people in a light filled street",
-        caption: "umg pending",
-        width: 2324, height: 3438,
       }
     ],
   },
