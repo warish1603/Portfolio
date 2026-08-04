@@ -1,9 +1,9 @@
-const bb = "In pursuit of immortalizing feelings of community and love.";
+const bb = "In pursuit of immortalization. The catacombs";
 const siteConfig = {
   /* ─── Identity ─────────────────────────────────── */
   
   name: "cobraghai",
-  tagline: "Visual Work",
+  tagline: "Visual Work on 35mm Film",
   bio: `'${bb}'`,
   location: "Cape Town, South Africa",
 
@@ -26,7 +26,7 @@ const siteConfig = {
   /* ─── Landing page ─────────────────────────────── */
   landing: {
     heroImage: "/images/000029.JPG",
-    heroAlt: "landscape photograph of autumn leaves",
+    heroAlt: "landscape, black and white, the nines, tana's family",
     heroWidth: 5397,
     heroHeight: 3649,
     portfolio: [
@@ -36,7 +36,128 @@ const siteConfig = {
         alt: "Two men sat in an vintage lounge",
         caption: "Awonke Moko and Vaice at prettygirlslikeevents",
         width: 4096, height: 2769,
-      }
+      },
+      {
+        src: "/images/000002.JPG",
+        alt: "old man at camera table",
+        caption: "Tony",
+        width: 5444, height: 3649,
+      },
+      {
+        src: "/images/000008.JPG",
+        alt: "Coffee shop",
+        caption: "Pick me up, bootlegger's coffee",
+        width: 5444, height: 3649,
+      },
+      {
+        src: "/images/000013.JPG",
+        alt: "Thorny branches, street behind",
+        caption: "Bird's eye view",
+        width: 5444, height: 3649,
+      },
+      {
+        src: "/images/000016.JPG",
+        alt: "",
+        caption: "",
+        width: 5132, height: 3440,
+      },
+      {
+        src: "/images/000017.JPG",
+        alt: "Three men working on a bakkie",
+        caption: "Mixed feelings at work",
+        width: 5444, height: 3649,
+      },
+      {
+        src: "/images/000019.JPG",
+        alt: "Close up of a man, gold tooth, smiling",
+        caption: "Willing Participant",
+        width: 5444, height: 3649,
+      },
+      {
+        src: "/images/lyle in focus.JPG",
+        alt: "Close up of a man, out of focus, black and white, autumn trees in the background",
+        caption: "Lyle in focus",
+        width: 5444, height: 3649,
+      },
+      {
+        src: "/images/92F90F9F-1059-4B16-8143-AA77E7861710.jpeg",
+        alt: "Two men sat in an vintage lounge",
+        caption: "Awonke Moko and Vaice at prettygirlslikeevents",
+        width: 4096, height: 2769,
+      },
+      {
+        src: "/images/hunter&hunted.JPG",
+        alt: "Two stone statues at the edge of an old building",
+        caption: "hunter & hunted",
+        width: 4430, height: 3649,
+      },
+      {
+        src: "/images/ambitious.JPG",
+        alt: "Micro shot of hand by bulb, black and white",
+        caption: "Ambitious",
+        width: 5044, height: 3649,
+      },
+      {
+        src: "/images/alice.JPG",
+        alt: "A girl by a table on the other side of a window",
+        caption: "Alice",
+        width: 5286, height: 3543,
+      },
+      {
+        src: "/images/aswas.JPG",
+        alt: "Upclose of a woman leaning on a ledge",
+        caption: "Answers",
+        width: 2333, height: 2279,
+      },
+      {
+        src: "/images/maestro.JPG",
+        alt: "Portrait of an old man painting on the street",
+        caption: "generous maestro",
+        width: 5444, height: 3649,
+      },
+      {
+        src: "/images/maestroatwork.JPG",
+        alt: "Old man painting on the street, woman crossing the road",
+        caption: "Eye to eye",
+        width: 4741, height: 3422,
+      },
+      {
+        src: "/images/000030.JPG",
+        alt: "Traffic against city buildings",
+        caption: "",
+        width: 5444, height: 3649,
+      },
+      {
+        src: "/images/000032.JPG",
+        alt: "Blurry image of a bar ",
+        caption: "Golden Hole",
+        width: 5444, height: 3649,
+      },
+      {
+        src: "/images/windowdoublee.JPG",
+        alt: "Double exposure image of a window and it's view",
+        caption: "viewer",
+        width: 5021, height: 3226,
+      },
+      {
+        src: "/images/happyaccident.JPG",
+        alt: "Mushroom growing out of tree stump",
+        caption: "happy accident",
+        width: 5233, height: 3649,
+      },
+      {
+        src: "/images/000037.JPG",
+        alt: "Traffic, mountain in the back",
+        caption: "",
+        width: 5444, height: 3649,
+      },
+      {
+        src: "/images/mũrathie kũ.JPG",
+        alt: "People walking at junction",
+        caption: "Mũrathie Kũ?",
+        width: 4730, height: 2039,
+      },
+
     ],
   },
 
