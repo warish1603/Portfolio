@@ -44,10 +44,10 @@ const siteConfig = {
         width: 5444, height: 3649,
       },
       {
-        src: "/images/000008.JPG",
+        src: "/images/coffy.JPG",
         alt: "Coffee shop",
         caption: "Pick me up, bootlegger's coffee",
-        width: 5444, height: 3649,
+        width: 3154, height: 2639,
       },
       {
         src: "/images/000013.JPG",
@@ -78,12 +78,6 @@ const siteConfig = {
         alt: "Close up of a man, out of focus, black and white, autumn trees in the background",
         caption: "Lyle in focus",
         width: 5444, height: 3649,
-      },
-      {
-        src: "/images/92F90F9F-1059-4B16-8143-AA77E7861710.jpeg",
-        alt: "Two men sat in an vintage lounge",
-        caption: "Awonke Moko and Vaice at prettygirlslikeevents",
-        width: 4096, height: 2769,
       },
       {
         src: "/images/hunter&hunted.JPG",
@@ -152,7 +146,7 @@ const siteConfig = {
         width: 5444, height: 3649,
       },
       {
-        src: "/images/mũrathie kũ.JPG",
+        src: "/images/murathieku.JPG",
         alt: "People walking at junction",
         caption: "Mũrathie Kũ?",
         width: 4730, height: 2039,
